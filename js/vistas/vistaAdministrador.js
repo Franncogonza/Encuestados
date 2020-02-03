@@ -24,12 +24,14 @@ VistaAdministrador.prototype = {
     construirElementoPregunta: function(pregunta) {
         var contexto = this;
         var nuevoItem;
-        nuevoItem = pregunta;
-        pregunta.id = pregunta.id;
-        pregunta.className = list - group - item;
-
         //completar
         //asignar a nuevoitem un elemento li con clase "list-group-item", id "pregunta.id" y texto "pregunta.textoPregunta"
+        nuevoItem = $('<li/>', {
+            'html': pregunta.textoPregunta,
+            'class': 'list-group-item',
+            'id': pregunta.id
+        });
+
         var interiorItem = $('.d-flex');
         var titulo = interiorItem.find('h5');
         titulo.text(pregunta.textoPregunta);
